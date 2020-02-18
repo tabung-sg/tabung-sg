@@ -80,6 +80,3 @@ test:
 #
 production:
   <<: *default
-  database: tabung_sg_production
-  username: tabung_sg
-  password: <%= ENV['TABUNG_SG_DATABASE_PASSWORD'] %>
