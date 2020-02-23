@@ -1,0 +1,11 @@
+.idea
+.DS_Store
+.gitignore
+.gitpod.*
+docker-compose.yml
+Dockerfile
+*.iml
+dev
+log/*.log
+test
+tmp
