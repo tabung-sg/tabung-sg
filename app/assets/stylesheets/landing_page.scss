@@ -1,3 +1,18 @@
 // Place all the styles related to the LandingPage controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.landing-page {
+  width: 100%;
+  background-image: image-url('misc/Tabung_Background_RGB.png');
+  background-size: cover;
+  height: 800px;
+
+  .top {
+    background: linear-gradient(90deg, rgb(146, 96, 58), rgb(249, 184, 118), rgb(249, 184, 118), rgb(146, 96, 58));
+    height: 300px;
+
+    img {
+    }
+  }
+}
