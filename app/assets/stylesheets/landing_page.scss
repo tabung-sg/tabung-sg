@@ -12,6 +12,8 @@
   height: $landing-page-height;
 
   .top {
+    display: flex;
+    align-items: center;
     background: linear-gradient(90deg, rgb(146, 96, 58), rgb(249, 184, 118), rgb(249, 184, 118), rgb(146, 96, 58));
     height: $top-height;
   }
