@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+// From https://www.kryogenix.org/code/pick/
+$sepia: rgb(114, 64, 18);
+$te_papa_green: rgb(40, 67, 55);
+$genoa: rgb(19, 106, 94);
+$potters_clay: rgb(146, 96, 58);
+$macaroni_and_cheese: rgb(249, 184, 118);
+
 .landing-page {
   $landing-page-height: 100vh;
   $top-height: 35vh;
@@ -15,10 +22,25 @@
   height: $landing-page-height;
 
   .top {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(90deg, rgb(146, 96, 58), rgb(249, 184, 118), rgb(249, 184, 118), rgb(146, 96, 58));
+    background: linear-gradient(90deg, $potters_clay, $macaroni_and_cheese, $macaroni_and_cheese, $potters_clay);
     height: $top-height;
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-subtext {
+      text-align: center;
+      margin-top: -10px;
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.8em;
+        font-family: sans-serif;
+        color: rgb(114, 64, 18);
+      }
+    }
   }
 
   .launching-soon-container {
@@ -29,7 +51,7 @@
     display: flex;
     width: $width;
     height: $height;
-    background: linear-gradient(rgb(249, 184, 118), rgb(146, 96, 58));
+    background: linear-gradient($macaroni_and_cheese, $potters_clay);
     margin: 80px auto 20px;
 
     .launching-soon {
@@ -38,14 +60,14 @@
       margin: 5px;
       width: ($width - ($margin * 2));
       height: ($height - ($margin * 2));
-      background: linear-gradient(rgb(19, 106, 94), rgb(40, 67, 55));
+      background: linear-gradient($genoa, $te_papa_green);
 
       p {
         width: inherit;
         text-align: center;
         font-size: 1.2em;
         font-family: sans-serif;
-        color: rgb(249, 184, 118);
+        color: $macaroni_and_cheese;
       }
     }
   }
@@ -58,14 +80,14 @@
     margin: 0 auto;
     padding: 5px 5px;
     z-index: 100;
-    background: linear-gradient(rgb(40, 67, 55), rgb(19, 106, 94));
+    background: linear-gradient($te_papa_green, $genoa);
     font-size: 0.9em;
     font-family: sans-serif;
-    color: rgb(249, 184, 118);
+    color: $macaroni_and_cheese;
 
     .brand-icon {
       font-size: 3rem;
-      color: rgb(249, 184, 118);
+      color: $macaroni_and_cheese;
       margin: 10px 5px;
 
       a {
