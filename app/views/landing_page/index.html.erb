@@ -1,6 +1,9 @@
 <div class="landing-page">
-  <div class="top">
-    <%= image_tag("misc/Tabung_Logo_FullColour_RGB.png", size: 210, class: "center") %>
-  </div>
-  <%= render partial: "launching_soon" %>
+  <% if @show_pre_launch_page %>
+    <div class="top">
+      <%= image_tag("misc/Tabung_Logo_FullColour_RGB.png", size: 210, class: "center") %>
+    </div>
+    <%= render partial: "launching_soon" %>
+    <%= render partial: "community_updates" %>
+  <% end %>
 </div>
