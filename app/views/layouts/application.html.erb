@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TabungSg</title>
+    <title>TabungSG</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://kit.fontawesome.com/b4dd579957.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="main"></div>
+    <%= javascript_pack_tag 'tabung', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
