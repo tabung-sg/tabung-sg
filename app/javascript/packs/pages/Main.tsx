@@ -1,10 +1,24 @@
 import React from "react";
+import styled from "styled-components";
+import PreLaunch from "./PreLaunch";
 
 type Props = {
-  name: string;
+  showPreLaunchPage: boolean;
 }
 
 export default function Main(props: Props) {
-  console.log("Hello from typescript and react");
-  return <div>Hello {props.name}!</div>;
+  let display;
+  if (props.showPreLaunchPage) {
+    display = <PreLaunch />;
+  }
+  else {
+    display = <ActualApplication>SHOWING ACTUAL APPLICATION!</ActualApplication>;
+  }
+
+  return display;
 }
+
+const ActualApplication = styled.div`
+  text-align: center;
+  background-color: white;
+`;
