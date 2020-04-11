@@ -21,7 +21,8 @@ Rails.application.routes.draw do
   }
 
   root 'landing_page#index'
-  resource 'mosques', only: [:index, :show]
+
+  get 'mosques' => 'mosques#index'
 
   get "/auth/google/callback"  => "authentications#google"
 end
