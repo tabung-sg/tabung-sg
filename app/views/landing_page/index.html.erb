@@ -10,5 +10,8 @@
     </div>
     <%= render partial: "launching_soon" %>
     <%= render partial: "community_updates" %>
+  <% else %>
+    <div id="main"></div>
+    <%= javascript_pack_tag 'tabung', 'data-turbolinks-track': 'reload' %>
   <% end %>
 </div>
