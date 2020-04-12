@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'omniauth-google-oauth2', '~> 0.8.0'
 gem 'devise', '~> 4.7.1'
 gem 'activeadmin', '~> 2.6.1'
+gem 'google-cloud-storage', '~> 1.11', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
