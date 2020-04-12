@@ -1,7 +1,9 @@
 class MosquesController < ApplicationController
   def index
-  end
+    mosques = Mosque.all
 
-  def show
+    respond_to do |format|
+      format.json { render json: {mosques: mosques}.to_json }
+    end
   end
 end

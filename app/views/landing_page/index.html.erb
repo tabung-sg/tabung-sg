@@ -1,14 +1,2 @@
-<div class="landing-page">
-  <% if @show_pre_launch_page %>
-    <div class="top">
-      <div class="logo">
-        <%= image_tag("misc/Tabung_Logo_FullColour_RGB.png", size: 210, class: "center") %>
-      </div>
-      <div class="logo-subtext">
-        <p>Cashless donations. Anywhere, anytime.</p>
-      </div>
-    </div>
-    <%= render partial: "launching_soon" %>
-    <%= render partial: "community_updates" %>
-  <% end %>
-</div>
+<div id="main"></div>
+<%= javascript_pack_tag 'tabung', 'data-turbolinks-track': 'reload' %>
