@@ -82,3 +82,8 @@ yarn-debug.log*
 
 # MacOS
 .DS_Store
+
+# VSCode
+.vscode/*
+*.code-workspace
+.history/
