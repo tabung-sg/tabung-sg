@@ -29,10 +29,7 @@ ActiveAdmin.register Mosque do
       row :description
       row :image do |mosque|
         image_tag url_for(mosque.image), {
-          "max-width" => "300px",
-          "max-height" => "300px",
-          width: "auto",
-          height: "auto"
+          style: 'max-width:400px;max-height:400px;width:auto;height:auto'
         }
       end
       row :qr_code_image do |mosque|
