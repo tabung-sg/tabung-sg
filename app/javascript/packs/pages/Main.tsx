@@ -56,6 +56,15 @@ const ApplicationContainer = styled.div`
 `;
 
 const CardsContainer = styled.div`
-  padding-top: 20px;
-  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @media(min-width: 900px) {
+    max-width: 900px;
+  }
+
+  @media(max-width: 450px) {
+    max-width: 390px;
+  }
 `;
