@@ -1,2 +1,6 @@
-<div id="main"></div>
-<%= javascript_pack_tag 'tabung', 'data-turbolinks-track': 'reload' %>
+<% if @show_pre_launch_page %>
+  <%= render partial: 'pre_launch' %>
+<% else %>
+  <div id="main"></div>
+  <%= javascript_pack_tag 'tabung', 'data-turbolinks-track': 'reload' %>
+<% end %>
