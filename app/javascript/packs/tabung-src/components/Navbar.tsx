@@ -7,9 +7,8 @@ type Props = {
   mosqueNames: string [];
 }
 export default function NavBar(props: Props) {
-  const height = 60;
-  return <Container height={height}>
-    <Logo size={35} />
+  const height = 100;
+  return <Container height={height} >
     <SearchBar mosqueNames={props.mosqueNames} />
   </Container>;
 }

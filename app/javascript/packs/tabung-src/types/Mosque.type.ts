@@ -5,4 +5,6 @@ export type Mosque = {
   email: string;
   website: string;
   description: string;
+  image: string;
+  qr_code: string;
 }
