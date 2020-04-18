@@ -1,17 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 // @ts-ignore
-import TabungLogoFullColour from "images/misc/Tabung_Logo_FullColour_RGB.png";
+import TabungLogoFullColour from "images/misc/logo.png";
 
 type Props = {
   size: number;
+  additionalStyles?: string;
 }
 
 export default function Logo(props: Props) {
-  return <Image size={props.size} src={TabungLogoFullColour} />;
+  return <Image size={props.size} additionalStyles={props.additionalStyles} src={TabungLogoFullColour} />;
 }
 
 const Image = styled.img`
-  width: ${props => props.size}px;
-  height: ${props => props.size}px;
+  max-width: ${props => props.size}px;
+  max-height: ${props => props.size}px;
+  width: auto;
+  height: auto;
+  ${props => props.additionalStyles}
 `;

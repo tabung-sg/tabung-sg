@@ -1,14 +1,5 @@
 import styled from "styled-components";
-import {macaroniAndCheese, pottersClay} from "../components/Colors";
-
-export const Info = styled.div`
-  border: 1px solid black;
-  width: 80%;
-  font-size: 15px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 20px;
-`;
+import {macaroniAndCheese, pottersClay, tePapaGreen} from "../components/Colors";
 
 export const ApplicationContainer = styled.div`
   background: linear-gradient(90deg, ${pottersClay}, ${macaroniAndCheese}, ${macaroniAndCheese}, ${pottersClay});

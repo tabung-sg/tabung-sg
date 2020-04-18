@@ -12,14 +12,17 @@ export default function NavBar(props: Props) {
 
   return <Container height={height} >
     <Links>
-      <Link href="/">Home</Link>
-      <Link href="/">Who?</Link>
-      <Link href="/">What?</Link>
-      <Link href="/">Why?</Link>
-      <Link href="/">More</Link>
+      <Link href="/">HOME</Link>
+      <Link href="/">HOW TO DONATE</Link>
+      <Link href="/">ABOUT US</Link>
     </Links>
+    <Spacer />
     <SearchBarContainer>
       <SearchBar mosqueNames={props.mosqueNames}/>
     </SearchBarContainer>
   </Container>;
 }
+
+const Spacer = styled.div`
+  width: 20%;
+`;

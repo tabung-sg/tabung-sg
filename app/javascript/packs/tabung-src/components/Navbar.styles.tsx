@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const SearchBarContainer = styled.div`
-  width: 50%; 
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
 `;
 
 export const Link = styled.a`
@@ -21,7 +23,7 @@ export const Link = styled.a`
 `;
 
 export const Links = styled.div`
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -30,7 +32,6 @@ export const Links = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
   height: ${props => props.height}px;
   display: flex;
   flex-direction: row;

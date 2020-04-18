@@ -20,5 +20,5 @@ export default function SearchBar(props: Props) {
 
 const Container = styled.div`
   margin: 0 auto;
-  width: 50%;
+  width: 70%;
 `;
