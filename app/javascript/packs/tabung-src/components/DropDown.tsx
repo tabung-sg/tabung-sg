@@ -1,7 +1,6 @@
 import React, { ChangeEvent, KeyboardEvent, useEffect, useState } from "react";
-import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import {Container, ErrorMessage, IconContainer, Menu, MenuItem, StyledDropdown} from "./DropDown.styles";
 
 type Props = {
@@ -37,7 +36,12 @@ export default function Dropdown(props: Props) {
     }
 
     if (ref.current.contains(e.target as Element)) {
-      setIsOpen(true);
+      if (value === '') {
+        setIsOpen(false);
+      }
+      else {
+        setIsOpen(true);
+      }
     } else {
       setIsOpen(false);
     }
@@ -70,7 +74,7 @@ export default function Dropdown(props: Props) {
     handleChange(option);
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.addEventListener("click", handleClick);
     return () => {
       document.body.removeEventListener("click", handleClick);
@@ -110,7 +114,7 @@ export default function Dropdown(props: Props) {
             onKeyDown={handleKeyDown}
         />
         <IconContainer>
-          <FontAwesomeIcon icon={faChevronDown} color="#000000" />
+          <FontAwesomeIcon icon={faSearch} color="#000000" />
         </IconContainer>
         {errorMessage}
         <Menu isOpen={isOpen}>{items}</Menu>

@@ -24,6 +24,7 @@ export const StyledDropdown = styled.input`
   border-bottom: 1px solid ${(props: StyledDropdownProps) => props.borderColor};
   transition: border-bottom-color 300ms;
   cursor: pointer;
+  background: transparent;
 
   &:focus {
     border-bottom: 1px solid ${(props: StyledDropdownProps) => props.borderColorFocus};
@@ -46,8 +47,7 @@ export const Menu = styled.div`
   right: 0px;
   z-index: 1;
   background: white;
-  border: 1px solid #EAEAEA;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+  border: none;
   transition: opacity 300ms linear;
 `;
 

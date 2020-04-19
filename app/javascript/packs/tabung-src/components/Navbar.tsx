@@ -1,25 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "./Logo";
 import SearchBar from "./SearchBar";
+import {Container, Link, Links, SearchBarContainer} from "./Navbar.styles";
 
 type Props = {
   mosqueNames: string [];
 }
+
 export default function NavBar(props: Props) {
   const height = 100;
+
   return <Container height={height} >
-    <SearchBar mosqueNames={props.mosqueNames} />
+    <Links>
+      <Link href="/">HOME</Link>
+      <Link href="/">HOW TO DONATE</Link>
+      <Link href="/">ABOUT US</Link>
+    </Links>
+    <Spacer />
+    <SearchBarContainer>
+      <SearchBar mosqueNames={props.mosqueNames}/>
+    </SearchBarContainer>
   </Container>;
 }
 
-const Container = styled.div`
-  width: 100%;
-  height: ${props => props.height}px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: transparent;
-  z-index: 1000;
+const Spacer = styled.div`
+  width: 20%;
 `;
