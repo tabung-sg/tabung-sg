@@ -2,7 +2,7 @@ class MosquesController < ApplicationController
   before_action :set_host_for_local_storage
 
   def index
-    mosques = Mosque.all.map do |m|
+    mosques = Mosque.all.order(id: :desc).map do |m|
       m.attributes.merge({
                              image: url_for(m.image),
                              qr_code: url_for(m.qr_code_image)
